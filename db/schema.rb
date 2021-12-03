@@ -16,11 +16,15 @@ ActiveRecord::Schema.define(version: 2021_12_03_032109) do
   enable_extension "plpgsql"
 
   create_table "questions", force: :cascade do |t|
-    t.string "title"
-    t.text "options", default: [], array: true
-    t.string "correct_answer"
+    t.string "type"
     t.string "subject"
+    t.string "topic"
     t.string "grade"
+    t.string "title"
+    t.string "incorrect_answer_1"
+    t.string "incorrect_answer_2"
+    t.string "incorrect_answer_3"
+    t.string "correct_answer"
     t.text "info"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

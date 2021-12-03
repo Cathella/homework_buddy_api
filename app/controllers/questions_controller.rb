@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   def index
     @questions = Question.all
-    # @questions = Question.find_by user: @used.id // show only questions added by the user.
+    # @questions = Question.where user: @user // show only questions added by the user.
 
     render json: @questions
   end

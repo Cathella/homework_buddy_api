@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   # POST /questions
   def create
     @question = Question.new(question_params)
-    @question.user = @user.id
+    @question.user = @user
 
     if @question.save
       render json: @question, status: :created, location: @question

@@ -86,5 +86,5 @@ test:
 production:
   <<: *default
   database: homework_buddy_api_production
-  username: homework_buddy_api
-  password: <%= ENV['HOMEWORK_BUDDY_API_DATABASE_PASSWORD'] %>
+  username: <%= Rails.application.credentials.username %>
+  password: <%= Rails.application.credentials.password %>

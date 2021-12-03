@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_12_03_032109) do
   enable_extension "plpgsql"
 
   create_table "questions", force: :cascade do |t|
-    t.string "type"
+    t.string "question_type"
     t.string "subject"
     t.string "topic"
     t.string "grade"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2021_12_03_032109) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "string"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
